@@ -36,14 +36,15 @@ Contributions are welcome!
 
 ## **Survey papers**
 
-- End-to-end Autonomous Driving: Challenges and Frontiers [[paper](https://ieeexplore.ieee.org/abstract/document/10614862)][[project](https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving)]
-- A Superalignment Framework in Autonomous Driving with Large Language Models
-- Foundation Models in Robotics: Applications, Challenges, and the Future
-- Toward General-Purpose Robots via Foundation Models: A Survey and Meta-Analysis
-- A Survey on Vision-Language-Action Models for Embodied AI
-- Visual Large Language Models for Generalized and Specialized Applications 
-- On the Prospects of Incorporating Large Language Models (LLMs) in Automated Planning and Scheduling
-- Foundation Models for Decision Making: Problems, Methods, and Opportunities
+- End-to-end Autonomous Driving: Challenges and Frontiers [[paper-TPAMI2025](https://ieeexplore.ieee.org/abstract/document/10614862)][[project](https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving)]![](https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving.svg?style=social&label=Star&maxAge=2592000)
+- A Superalignment Framework in Autonomous Driving with Large Language Models[[paper-TIV2024](https://ieeexplore.ieee.org/abstract/document/10588403)]
+- Prospective role of foundation models in advancing autonomous vehicles[[paper-Research2024](https://spj.science.org/doi/full/10.34133/research.0399)]
+- Large models for intelligent transportation systems and autonomous vehicles: A survey[[paper-AEI2024](https://www.sciencedirect.com/science/article/abs/pii/S1474034624004348)]
+- A survey for foundation models in autonomous driving [[paper-Arxiv](https://arxiv.org/abs/2402.01105)]
+- On the Prospects of Incorporating Large Language Models (LLMs) in Automated Planning and Scheduling[[paper](https://ojs.aaai.org/index.php/ICAPS/article/view/31503)]
+- Foundation Models for Decision Making: Problems, Methods, and Opportunities[[paper](https://arxiv.org/abs/2303.04129)]
+- Foundation Models for Autonomous Driving System: An Initial Roadmap[[paper](https://arxiv.org/abs/2504.00911)]
+- Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities[[paper](https://arxiv.org/abs/2401.08045)]
 
 ## **Research Papers**
 
