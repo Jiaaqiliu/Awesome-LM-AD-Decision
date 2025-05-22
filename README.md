@@ -34,17 +34,55 @@ Contributions are welcome!
 
 
 
-## **Survey papers**
+[//]: # (## **Survey papers**)
 
-- End-to-end Autonomous Driving: Challenges and Frontiers [[paper-TPAMI2025](https://ieeexplore.ieee.org/abstract/document/10614862)][[project](https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving)]![](https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving.svg?style=social&label=Star&maxAge=2592000)
-- A Superalignment Framework in Autonomous Driving with Large Language Models[[paper-TIV2024](https://ieeexplore.ieee.org/abstract/document/10588403)]
-- Prospective role of foundation models in advancing autonomous vehicles[[paper-Research2024](https://spj.science.org/doi/full/10.34133/research.0399)]
-- Large models for intelligent transportation systems and autonomous vehicles: A survey[[paper-AEI2024](https://www.sciencedirect.com/science/article/abs/pii/S1474034624004348)]
-- A survey for foundation models in autonomous driving [[paper-Arxiv](https://arxiv.org/abs/2402.01105)]
-- On the Prospects of Incorporating Large Language Models (LLMs) in Automated Planning and Scheduling[[paper](https://ojs.aaai.org/index.php/ICAPS/article/view/31503)]
-- Foundation Models for Decision Making: Problems, Methods, and Opportunities[[paper](https://arxiv.org/abs/2303.04129)]
-- Foundation Models for Autonomous Driving System: An Initial Roadmap[[paper](https://arxiv.org/abs/2504.00911)]
-- Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities[[paper](https://arxiv.org/abs/2401.08045)]
+[//]: # ()
+[//]: # (#### **End to End**)
+
+[//]: # (- End-to-end Autonomous Driving: Challenges and Frontiers [[TPAMI2025]&#40;https://ieeexplore.ieee.org/abstract/document/10614862&#41;][[project]&#40;https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving&#41;]![]&#40;https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving.svg?style=social&label=Star&maxAge=2592000&#41;)
+
+[//]: # (#### **Large Language Models**)
+
+[//]: # (- On the Prospects of Incorporating Large Language Models &#40;LLMs&#41; in Automated Planning and Scheduling[[ICAPS2024]&#40;https://ojs.aaai.org/index.php/ICAPS/article/view/31503&#41;][[project]&#40;https://ai4society.github.io/LLM-Planning-Viz/&#41;])
+
+[//]: # (- Llm4drive: A survey of large language models for autonomous driving[[Arxiv2023]&#40;https://arxiv.org/abs/2311.01043&#41;][[project]&#40;https://github.com/Thinklab-SJTU/Awesome-LLM4AD&#41;]![]&#40;https://img.shields.io/github/stars/Thinklab-SJTU/Awesome-LLM4AD.svg?style=social&label=Star&maxAge=2592000&#41;)
+
+[//]: # (#### **Foundation Models**)
+
+[//]: # (- Prospective role of foundation models in advancing autonomous vehicles[[Research2024]&#40;https://spj.science.org/doi/full/10.34133/research.0399&#41;])
+
+[//]: # (- Large models for intelligent transportation systems and autonomous vehicles: A survey[[AEI2024]&#40;https://www.sciencedirect.com/science/article/pii/S1474034624004348&#41;])
+
+[//]: # (- Vision language models in autonomous driving: A survey and outlook[[IV2024]&#40;https://ieeexplore.ieee.org/abstract/document/10531702/&#41;][[project]&#40;https://github.com/ge25nab/Awesome-VLM-AD-ITS&#41;]![]&#40;https://img.shields.io/github/stars/ge25nab/Awesome-VLM-AD-ITS.svg?style=social&label=Star&maxAge=2592000&#41;)
+
+[//]: # (- A Survey on Multimodal Large Language Models for Autonomous Driving[[WACV2024]&#40;https://openaccess.thecvf.com/content/WACV2024W/LLVM-AD/html/Cui_A_Survey_on_Multimodal_Large_Language_Models_for_Autonomous_Driving_WACVW_2024_paper.html&#41;])
+
+[//]: # (- A survey for foundation models in autonomous driving [[Arxiv2024]&#40;https://arxiv.org/abs/2402.01105&#41;])
+
+[//]: # (- Foundation Models for Decision Making: Problems, Methods, and Opportunities[[Arxiv2023]&#40;https://arxiv.org/abs/2303.04129&#41;])
+
+[//]: # (- Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities[[Arxiv2024]&#40;https://arxiv.org/abs/2401.08045&#41;])
+
+[//]: # (- Large Language Models for Human-Like Autonomous Driving: A Survey[[paper-ITSC2024]&#40;https://ieeexplore.ieee.org/abstract/document/10919629&#41;])
+[//]: # (- A Superalignment Framework in Autonomous Driving with Large Language Models[[paper-TIV2024]&#40;https://ieeexplore.ieee.org/abstract/document/10588403&#41;])
+[//]: # (- Foundation Models for Autonomous Driving System: An Initial Roadmap[[Arxiv2025]&#40;https://arxiv.org/abs/2504.00911&#41;])
+
+### 📚 **Survey Papers**
+
+| **Title** | **Year** | **Categories** | **Project**  |
+|-------|------|------------|------------------------------------------------------------------------|
+| [End-to-end Autonomous Driving: Challenges and Frontiers](https://ieeexplore.ieee.org/abstract/document/10614862) | TPAMI 2025 | End to End | [Project](https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving) |
+| [On the Prospects of Incorporating Large Language Models (LLMs) in Automated Planning and Scheduling](https://ojs.aaai.org/index.php/ICAPS/article/view/31503) | ICAPS 2024 | Large Language Models | [Project](https://ai4society.github.io/LLM-Planning-Viz/)              |
+| [Llm4drive: A survey of large language models for autonomous driving](https://arxiv.org/abs/2311.01043) | Arxiv 2023 | Large Language Models | [Project](https://github.com/Thinklab-SJTU/Awesome-LLM4AD)              |
+| [Prospective role of foundation models in advancing autonomous vehicles](https://spj.science.org/doi/full/10.34133/research.0399) | Research 2024 | Foundation Models |                                                                        |
+| [Large models for intelligent transportation systems and autonomous vehicles: A survey](https://www.sciencedirect.com/science/article/pii/S1474034624004348) | AEI 2024 | Foundation Models |                                                                        |
+| [Vision language models in autonomous driving: A survey and outlook](https://ieeexplore.ieee.org/abstract/document/10531702/) | IV 2024 | Foundation Models | [Project](https://github.com/ge25nab/Awesome-VLM-AD-ITS)                |
+| [A Survey on Multimodal Large Language Models for Autonomous Driving](https://openaccess.thecvf.com/content/WACV2024W/LLVM-AD/html/Cui_A_Survey_on_Multimodal_Large_Language_Models_for_Autonomous_Driving_WACVW_2024_paper.html) | WACV 2024 | Foundation Models |                                                               |
+| [A survey for foundation models in autonomous driving](https://arxiv.org/abs/2402.01105) | Arxiv 2024 | Foundation Models |                                                                        |
+| [Foundation Models for Decision Making: Problems, Methods, and Opportunities](https://arxiv.org/abs/2303.04129) | Arxiv 2023 | Foundation Models |                                                                        |
+| [Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities](https://arxiv.org/abs/2401.08045) | Arxiv 2024 | Foundation Models |                                                                        |
+
+
 
 ## **Research Papers**
 
