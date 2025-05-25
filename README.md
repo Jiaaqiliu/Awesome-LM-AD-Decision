@@ -27,14 +27,14 @@ Contributions are welcome!
     - [Categorization by Technical Route](#categorization-by-technical-route) 
         - [Transformer Architectures & Variants](#transformer-architectures--variants) 
         - [Multimodal Fusion Techniques](#multimodal-fusion-techniques) 
-        - [Prompt Engineering](#prompt-engineering-eg-chain-of-thought) 
+        - [Prompt Engineering](#prompt-engineering) 
         - [Knowledge Distillation & Transfer Learning](#knowledge-distillation--transfer-learning) 
 - [Datasets and Benchmarks](#datasets-and-benchmarks) 
 - [Other Awesome Lists](#other-awesome-lists)
 
 
 
-### 📚 **Survey Papers**
+###  **📚Survey Papers**
 
 | **Title** | **Year**      | **Categories**       | **Project**                                                                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------|-----------------------------------------------------------------------------------------------------------|
@@ -55,12 +55,12 @@ Contributions are welcome!
 ## **📄Research Papers**
 
 
-### **🧠 Categorization by Model Type**
+###  **Categorization by Model  Type**
 
 This section further elaborates on papers based on the primary type of foundation model employed for decision-making.
 
 
-#### **🤖LLM-based Approaches**
+#### **LLM-based Approaches**
 
 LLMs are primarily leveraged for their reasoning, planning, and natural language understanding/generation capabilities to guide autonomous driving decisions. A dominant trend in this area is the hybridization or agentic use of LLMs. Pure LLM-driven control is rare due to challenges in real-time performance, safety assurance, and precise numerical output. Instead, LLMs often function at a strategic or tactical level, acting as a "supervisor," "planner," or "reasoner" that guides more traditional or specialized modules like DRL agents or MPC controllers. This hierarchical system leverages the LLM's strengths in high-level reasoning and contextual understanding while offloading operational, real-time aspects to other components. This approach aims to augment specific parts of the AD stack, particularly those requiring human-like commonsense, reasoning about novel situations, or providing interpretable justifications for actions.
 
@@ -81,7 +81,7 @@ LLMs are primarily leveraged for their reasoning, planning, and natural language
 | [CoT-Drive: Efficient Motion Forecasting for Autonomous Driving with LLMs and Chain-of-Thought Prompting](https://arxiv.org/2503.07234) | <details><summary>Details</summary>   </details> | Arxiv 2025 |  |
 | [LearningFlow: Automated Policy Learning Workflow for Urban Driving with Large Language Models](https://arxiv.org/pdf/2501.05057) | <details><summary>Details</summary>   </details> | Arxiv 2025 |  |
 
-#### **👁️VLM-based Approaches**
+#### **VLM-based Approaches**
 
 VLMs bring visual understanding to the decision-making process, allowing for richer interpretations of the driving scene and enabling actions based on both visual percepts and linguistic instructions or reasoning. A key challenge for VLMs in AD decision-making is bridging the gap between their often 2D-centric visual-linguistic understanding and the precise, 3D spatio-temporal reasoning essential for safe driving. Many current VLMs are adapted from models pre-trained on large, static 2D image-text datasets , and they can struggle with the dynamic, three-dimensional nature of real-world driving scenarios. This means that while they might excel at describing a scene, their practical performance in actual driving tasks can be concerning. Effective VLMs for AD decision-making will likely need to incorporate stronger 3D visual backbones, improved mechanisms for temporal modeling beyond simple frame concatenation, and potentially integrate more structured environmental representations like Bird's-Eye-View (BEV) maps or scene graphs directly into their reasoning processes.
 
@@ -109,7 +109,7 @@ VLMs bring visual understanding to the decision-making process, allowing for ric
 | [Training-Free Open-Ended Object Detection and Segmentation via Attention as Prompts](https://arxiv.org/abs/2410.05963) | <details><summary>Details</summary>This training-free framework combines a VLM (for generalized object recognition, e.g., recognizing rare objects in AD scenarios) with the Segment-Anything Model (SAM, for generalized object localization). It uses attention maps from the VLM as prompts for SAM to address open-ended object detection and segmentation, which is crucial for robust perception feeding into decision-making systems. </details> | NeurIPS 2024              |                                                              |
 
 
-#### **🧮 VLA-based Approaches**
+#### **VLA-based Approaches**
 
 VLAs aim to create more generalist agents that can perceive, reason, and act, often in an end-to-end fashion. For autonomous driving, this means models that can take raw sensor data and high-level goals to produce driving actions. While VLAs offer the promise of true end-to-end decision-making by unifying perception, reasoning, and action generation , their application in safety-critical autonomous driving faces a significant hurdle: ensuring the reliability and verifiability of actions generated by these complex, often black-box, generative models. The potential for "hallucinated" or unexpected outputs from generative models is a recurring concern. A major research direction for VLAs in AD will involve developing methods for safety validation, uncertainty quantification, and robust fallback mechanisms. This might include hybrid approaches where VLA outputs are monitored or constrained by traditional safety layers, or novel training paradigms that explicitly optimize for safety and predictability.
 
@@ -117,12 +117,12 @@ VLAs aim to create more generalist agents that can perceive, reason, and act, of
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------- | ------------------------------------------------ |
 | [OpenDriveVLA: Towards End-to-end Autonomous Driving with Large Vision Language Action Model](https://arxiv.org/pdf/2503.23463) | <details><summary>Details</summary>This is an end-to-end VLA model specifically designed for autonomous driving. It generates reliable driving actions conditioned on 3D environmental perception, ego vehicle states, and driver commands. Key methodological contributions include a hierarchical vision-language alignment process to bridge the modality gap between driving visual representations and language embeddings, and an autoregressive agent-env-ego interaction process to ensure spatially and behaviorally informed trajectory planning.</details> | Arxiv 2025 | [Code](https://github.com/DriveVLA/OpenDriveVLA) |
 
-### **🧭Categorization by Research Direction**
+### **Categorization by Research Direction**
 
 This section groups papers based on overarching research themes and objectives within AD decision-making.
 
 
-#### **🚗End-to-End Driving Models**
+#### **End-to-End Driving Models**
 
 These models aim to learn a direct mapping from sensor inputs to driving actions or high-level plans, often minimizing handcrafted intermediate representations. The pursuit of end-to-end (E2E) models in autonomous driving is driven by the ambition to reduce error propagation inherent in modular pipelines and to potentially uncover novel, more effective driving strategies that might not emerge from separately optimized components. However, the "black box" nature and significant data requirements of traditional E2E deep learning models have been persistent challenges. The integration of LLMs, VLMs, and VLAs into E2E frameworks represents an effort to mitigate these issues by infusing these models with enhanced reasoning capabilities, better generalization from pre-training, and avenues for interpretability. This suggests a future where E2E AD systems are not purely opaque mappings but incorporate a semantic layer or reasoning backbone provided by foundation models, thus addressing key criticisms of earlier E2E approaches.
 
@@ -139,7 +139,7 @@ These models aim to learn a direct mapping from sensor inputs to driving actions
 
 
 
-#### **🕵️Interpretability and Explainable AI (XAI)**
+#### **Interpretability and Explainable AI (XAI)**
 
 Focuses on making the decision-making processes of AD systems transparent and understandable to humans. The integration of LLMs and VLMs is pushing XAI in autonomous driving beyond simple attention maps or feature visualizations towards generating natural language explanations and justifications that are genuinely comprehensible to human users, including passengers and regulators. This is crucial for building public trust, facilitating regulatory approval, and enabling more effective human-AI collaboration in the driving context. The challenge, however, lies in ensuring that these generated explanations are faithful to the model's actual decision-making process and are not merely plausible-sounding rationalizations generated post-hoc. Future work will need to concentrate on methods that tightly couple the reasoning and explanation generation with the core decision logic of the AD system.
 
@@ -154,7 +154,7 @@ Focuses on making the decision-making processes of AD systems transparent and un
 * **General XAI in AVs** : These resources provide a broader context on XAI in autonomous vehicles. They emphasize that XAI serves to bridge complex technological capabilities with human understanding, addressing safety assurance, regulatory compliance, and public trust. XAI can provide real-time justifications for actions (e.g., sudden braking) and post-hoc explanations (e.g., visual heat maps, natural language descriptions).
 * **RAG-Driver** : This work aims to provide generalisable driving explanations by employing retrieval-augmented in-context learning within Multi-Modal Large Language Models.
 
-#### **⚠️Safety-Critical Decision-Making & Long-Tail Scenarios**
+#### **Safety-Critical Decision-Making & Long-Tail Scenarios**
 
 Addresses the paramount challenge of ensuring safety, especially in rare, unforeseen (long-tail) situations where traditional, purely data-driven systems often falter due to lack of representative data. Effectively handling these scenarios requires more than just scaling up models; it demands robust reasoning, the integration of explicit and implicit knowledge (including safety rules and commonsense), and rigorous validation methodologies. The integration of LLMs and VLMs offers a promising avenue by leveraging their potential for abstract reasoning and broad knowledge. However, the inherent risk of these models generating incorrect or "hallucinated" outputs in critical situations necessitates a cautious approach. Future progress in this area will likely depend on hybrid architectures that combine the generalization capabilities of foundation models with explicit safety layers or verifiers, methods for effectively injecting structured safety knowledge (like traffic laws or physical constraints) into the decision-making loop, and the development of advanced simulation and testing protocols specifically designed to probe behavior in diverse long-tail scenarios and rigorously evaluate safety.
 
@@ -169,7 +169,7 @@ Addresses the paramount challenge of ensuring safety, especially in rare, unfore
 
 
 
-#### **🎯Reinforcement Learning for Decision-Making**
+#### **Reinforcement Learning for Decision-Making**
 
 Utilizes Reinforcement Learning (RL) techniques, often guided or enhanced by foundation models (LLMs/VLMs), to learn optimal driving policies through interaction with simulated or real-world environments. The synergy between foundation models and RL represents a powerful emerging trend in autonomous driving. Foundation models can address key RL challenges, such as high sample complexity and difficult reward design, by providing high-level guidance, superior state representations, or even by directly shaping the reward function itself. This combination can lead to more data-efficient learning of complex driving behaviors, improved generalization to novel scenarios by leveraging the pre-trained knowledge embedded in foundation models, and more interpretable reward structures, especially if derived from linguistic goals. The primary research focus in this area will likely be on optimizing the structure of this synergy—for example, determining whether the LLM should act as a planner for an RL agent, a reward shaper, or if end-to-end RL fine-tuning of a VLM is the most effective approach.
 
@@ -182,7 +182,7 @@ Utilizes Reinforcement Learning (RL) techniques, often guided or enhanced by fou
 * **VLM RL for general decision-making (Fine-tuning Vision-Language Models with Task Rewards for Multi-Step Goal-Directed Decision Making)** : This research explores fine-tuning VLMs with RL for general multi-step goal-directed tasks. The VLM generates Chain-of-Thought reasoning leading to a text-based action, which is then parsed and executed in an interactive environment to obtain task rewards for RL-based fine-tuning. This general methodology is highly relevant for training decision-making agents in autonomous driving.
 
 
-#### **🌍World Models for Prediction and Planning**
+#### **World Models for Prediction and Planning**
 
 Involves building internal representations of the environment and its dynamics to predict future states and plan actions accordingly. Foundation models, particularly generative models like Diffusion Models, GANs, LLMs, and VLMs, are becoming key enablers for constructing more powerful and versatile world models for autonomous driving. These advanced world models are evolving beyond simple state prediction to encompass rich semantic understanding, the generation of diverse future scenarios (including long-tail events), and even interaction with language-based instructions or goals. This fusion of generative world models with the reasoning capabilities of LLMs/VLMs can lead to AD systems that perform sophisticated "what-if" analyses, anticipate a broader range of future possibilities, and plan more robustly by "imagining" the consequences of actions within a semantically rich, simulated future. This also has profound implications for creating highly realistic and controllable simulation environments for training and testing AD systems.
 
@@ -199,7 +199,7 @@ Involves building internal representations of the environment and its dynamics t
 * **Sora (Video generation models as world simulators)** : OpenAI's Sora, while a general video generation model, is highlighted for its potential as a world simulator, which has implications for generating dynamic driving scenarios.
 
 
-#### **🗺️Hierarchical Planning and Control**
+#### **Hierarchical Planning and Control**
 
 Decomposes the complex driving task into multiple levels of abstraction, often with foundation models handling higher-level reasoning and planning, and other specialized modules executing lower-level control actions. This approach mirrors human cognitive strategies where high-level goals are broken down into manageable sub-tasks. In autonomous driving, this means LLMs or VLMs might determine a strategic maneuver (e.g., "prepare to change lanes and overtake"), which is then translated into a sequence of tactical actions (e.g., check mirrors, signal, adjust speed, steer) executed by a more traditional planner or controller. This layered approach allows for leveraging the strengths of foundation models in complex reasoning and language understanding, while relying on established methods for precise, real-time vehicle control, potentially offering a more robust and interpretable path to autonomy.
 
@@ -214,12 +214,12 @@ Decomposes the complex driving task into multiple levels of abstraction, often w
 * **Hierarchical Framework for Mixing Driving Data** : While focused on data compatibility for trajectory prediction, this work proposes a hierarchical framework, suggesting that different levels of processing or adaptation might be needed when dealing with complex data sources, which can inform hierarchical planning approaches.
 * **Hierarchical Planning Engine (General LLM Agent Concept)** : This describes a general concept for LLM agents where a high-level goal is decomposed into a structured, actionable plan (Phases -> Tasks -> Steps), which is a core idea in hierarchical planning.
 
-### **🧪Categorization by Application Field in Decision-Making**
+### **Categorization by Application Field in Decision-Making**
 
 This section organizes papers based on the specific aspect of the autonomous driving decision-making pipeline they primarily address.
 
 
-#### **🧼Perception-Informed Decision-Making**
+#### **Perception-Informed Decision-Making**
 
 These works focus on how enhanced perception, often through LLMs/VLMs, directly informs or enables better downstream decision-making. This involves not just detecting objects but understanding their context, relationships, and potential impact on driving strategy.
 
@@ -235,7 +235,7 @@ These works focus on how enhanced perception, often through LLMs/VLMs, directly 
 * **HiLM-D** : Focuses on high-resolution understanding in MLLMs for AD, specifically for identifying, explaining, and localizing risk objects (ROLISP task), which is a critical perceptual input for safe decision-making.
 * **Talk2BEV** : Provides a language-enhanced interface for BEV maps, allowing natural language queries to interpret complex driving scenes represented in BEV, thus informing situational awareness for decision-making.
 
-#### **👥Behavioral Planning & Prediction**
+#### **Behavioral Planning & Prediction**
 
 Concerns predicting the future behavior of other road users (vehicles, pedestrians, cyclists) and planning the ego-vehicle's behavior in response, often involving understanding intentions and social interactions.
 
@@ -252,7 +252,7 @@ Concerns predicting the future behavior of other road users (vehicles, pedestria
 * **GPT-4V for Pedestrian Behavior Prediction** : Evaluates GPT-4V's capabilities for predicting pedestrian behavior, a crucial aspect of behavioral planning in urban environments.
 
 
-#### **🛤️Motion Planning & Trajectory Generation**
+#### **Motion Planning & Trajectory Generation**
 
 Focuses on generating safe, comfortable, and feasible paths or sequences of waypoints for the autonomous vehicle to follow.
 
@@ -269,7 +269,7 @@ Focuses on generating safe, comfortable, and feasible paths or sequences of wayp
 * **VLP (Vision Language Planning for Autonomous Driving)** : Proposes a Vision Language Planning model composed of ALP (Action Localization and Prediction) and SLP (Safe Local Planning) components to improve ADS from BEV reasoning and decision-making for planning.
 
 
-#### **🎮Direct Control Signal Generation**
+#### **Direct Control Signal Generation**
 
 Involves models that directly output low-level control commands for the vehicle, such as steering angle and acceleration/braking.
 
@@ -281,7 +281,7 @@ Involves models that directly output low-level control commands for the vehicle,
 * **QUAR-VLA** : For quadruped robots, QUART (the VLA model) generates rich control commands including base velocity, posture, and gait parameters, which are analogous to direct control signals for a vehicle.
 
 
-#### **🗣️Human-AI Interaction & Command Understanding**
+#### **Human-AI Interaction & Command Understanding**
 
 Focuses on enabling autonomous vehicles to understand and respond to human language commands, preferences, or queries, facilitating more natural and intuitive interaction.
 
@@ -296,12 +296,12 @@ Focuses on enabling autonomous vehicles to understand and respond to human langu
 * **ChatGPT as Your Vehicle Co-Pilot** : Designs a universal framework embedding LLMs as a vehicle "Co-Pilot" to accomplish specific driving tasks based on human intention and provided information.
 * **LingoQA** : While a benchmark, its focus on video question answering (including action justification and scene description) directly supports the development of systems that can interactively explain their understanding and decisions to humans.
 
-### **🛠️Categorization by Technical Route**
+### **Categorization by Technical Route**
 
 This section classifies papers based on the core AI techniques or methodologies they employ or innovate upon.
 
 
-#### **🧱Transformer Architectures & Variants**
+#### **Transformer Architectures & Variants**
 
 Many LLMs, VLMs, and VLAs are based on the Transformer architecture, known for its efficacy in handling sequential data and capturing long-range dependencies.
 
@@ -321,7 +321,7 @@ Many LLMs, VLMs, and VLAs are based on the Transformer architecture, known for i
 * **QUAR-VLA** : Proposes QUAdruped Robotic Transformer (QUART), explicitly naming its VLA model as Transformer-based.
 
 
-#### **🔗Multimodal Fusion Techniques**
+#### **Multimodal Fusion Techniques**
 
 These works explore or propose novel ways to combine information from different modalities (e.g., vision, language, LiDAR, radar, vehicle states) for improved decision-making. Effective fusion is critical for VLMs and VLAs. The challenge in multimodal fusion lies in effectively aligning and integrating information from disparate sources, such as pixel-level visual data and semantic language features. This becomes even more complex when dealing with multiple sensor inputs (cameras, LiDAR, radar) and dynamic temporal information inherent in driving.
 
@@ -338,7 +338,7 @@ These works explore or propose novel ways to combine information from different 
 * **COMPASS (COntrastive Multimodal Pre-training for AutonomouS Systems)** : While a general pre-training approach for autonomous systems, COMPASS constructs a multimodal graph to connect signals from different modalities (e.g., camera, LiDAR, IMU, odometry) and maps them into factorized spatio-temporal latent spaces for motion and state representation. This is relevant for learning fused representations for decision-making.
 
 
-#### **✏️Prompt Engineering **
+#### **Prompt Engineering **
 
 Focuses on designing effective prompts to guide foundation models, especially LLMs and VLMs, to elicit desired reasoning processes and outputs for decision-making tasks. Chain-of-Thought (CoT) prompting, which encourages models to generate intermediate reasoning steps, is a prominent technique in this area. This method simulates human-like reasoning by breaking down complex problems into a sequence of manageable steps, leading to more accurate and transparent outputs, particularly for tasks requiring multi-step reasoning.
 
@@ -354,7 +354,7 @@ Focuses on designing effective prompts to guide foundation models, especially LL
 * **OmniDrive** : Designs prompts for GPT-4 to generate coherent Q&A data for driving tasks by using simulated trajectories for counterfactual reasoning to identify key traffic elements and assess outcomes.
 
 
-#### **♻️Knowledge Distillation & Transfer Learning**
+#### **Knowledge Distillation & Transfer Learning**
 
 Involves transferring knowledge from larger, more capable models (like powerful proprietary LLMs/VLMs) or from diverse data sources to smaller, more efficient models suitable for deployment in autonomous vehicles, or adapting models trained in one domain (e.g., general web text/images) to the specific domain of autonomous driving.
 
