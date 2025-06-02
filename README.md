@@ -80,6 +80,7 @@ LLMs are primarily leveraged for their reasoning, planning, and natural language
 | [PADriver: Towards Personalized Autonomous Driving](https://arxiv.org/pdf/2505.05240) | <details><summary>Details</summary>   </details> | Arxiv 2025 |  |
 | [CoT-Drive: Efficient Motion Forecasting for Autonomous Driving with LLMs and Chain-of-Thought Prompting](https://arxiv.org/2503.07234) | <details><summary>Details</summary>   </details> | Arxiv 2025 |  |
 | [LearningFlow: Automated Policy Learning Workflow for Urban Driving with Large Language Models](https://arxiv.org/pdf/2501.05057) | <details><summary>Details</summary>   </details> | Arxiv 2025 |  |
+| [Distilling Multi-modal Large Language Models for Autonomous Driving](https://arxiv.org/abs/2501.09757) | <details><summary>Details</summary> </details> | Arxiv 2025 | |
 
 #### **VLM-based Approaches**
 
@@ -107,6 +108,8 @@ VLMs bring visual understanding to the decision-making process, allowing for ric
 | [DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models](https://arxiv.org/abs/2402.12289) | <details><summary>Details</summary>This system leverages VLMs for enhanced scene understanding and planning capabilities. It also proposes DriveVLM-Dual, a hybrid system that combines the strengths of DriveVLM with traditional AD pipelines to address VLM limitations in spatial reasoning and computational requirements, particularly for long-tail critical objects.</details> | Arxiv 2024                | [Project](https://tsinghua-mars-lab.github.io/DriveVLM/)     |
 | [LingoQA: Visual Question Answering for Autonomous Driving](https://arxiv.org/abs/2312.14115) | <details><summary>Details</summary>This project introduces a benchmark and a large dataset (419.9k QA pairs from 28K unique video scenarios) for video question answering specifically in the autonomous driving domain. It focuses on evaluating a VLM's ability to perform reasoning, justify actions, and describe scenes, and proposes the Lingo-Judge metric for evaluation.</details> | ECCV 2024                 | [Code](https://github.com/wayveai/LingoQA/)                  |
 | [Training-Free Open-Ended Object Detection and Segmentation via Attention as Prompts](https://arxiv.org/abs/2410.05963) | <details><summary>Details</summary>This training-free framework combines a VLM (for generalized object recognition, e.g., recognizing rare objects in AD scenarios) with the Segment-Anything Model (SAM, for generalized object localization). It uses attention maps from the VLM as prompts for SAM to address open-ended object detection and segmentation, which is crucial for robust perception feeding into decision-making systems. </details> | NeurIPS 2024              |                                                              |
+| [ORION: A Holistic End-to-End Autonomous Driving Framework by Vision-Language Instructed Action Generation](https://arxiv.org/abs/2503.19755) | <details><summary>Details</summary> </details>               | Arxiv 2025                | [Code](https://github.com/xiaomi-mlab/Orion)                 |
+| [Generative Planning with 3D-vision Language Pre-training for End-to-End Autonomous Driving](https://arxiv.org/abs/2501.08861) | <details><summary>Details</summary> </details>               | Arxiv 2025                |                                                              |
 
 
 #### **VLA-based Approaches**
@@ -137,6 +140,9 @@ These models aim to learn a direct mapping from sensor inputs to driving actions
 | [VLM-E2E: Enhancing End-to-End Autonomous Driving with Multi modal Driver Attention Fusion](https://arxiv.org/2502.18042) | <details><summary>Details</summary>This research aims to enhance end-to-end autonomous driving by using VLMs to provide attentional cues and fusing multimodal information (BEV and text features) for semantic supervision.</details> | Arxiv 2025                |                                                            |
 | [VLM-AD: End-to-End Autonomous Driving through Vision-Language Model Supervision](https://arxiv.org/pdf/2412.14446) | <details><summary>Details</summary>This method leverages VLMs as teachers to provide reasoning-based text annotations, which serve as supplementary supervisory signals to train end-to-end AD pipelines, extending beyond standard trajectory labels.</details> | Arxiv 2024                |                                                            |
 | [GenAD: Generative End-to-End Autonomous Driving](https://arxiv.org/abs/2402.11502) | <details><summary>Details</summary>GenAD models autonomous driving as a trajectory generation problem, adopting an instance-centric scene tokenizer and a variational autoencoder for trajectory prior modeling in an E2E setup.</details> | Arxiv 2024                | [Code](https://github.com/wzzheng/GenAD)                   |
+| [ORION: A Holistic End-to-End Autonomous Driving Framework by Vision-Language Instructed Action Generation](https://arxiv.org/abs/2503.19755) | <details><summary>Details</summary> </details>               | Arxiv 2025                | [Code](https://github.com/xiaomi-mlab/Orion)               |
+| [Distilling Multi-modal Large Language Models for Autonomous Driving](https://arxiv.org/abs/2501.09757) | <details><summary>Details</summary> </details>               | Arxiv 2025                |                                                            |
+| [Generative Planning with 3D-vision Language Pre-training for End-to-End Autonomous Driving](https://arxiv.org/abs/2501.08861) | <details><summary>Details</summary> </details>               | Arxiv 2025                |                                                            |
 
 
 
@@ -440,7 +446,7 @@ If you find this repository useful, please consider citing this list:
 ```
 @misc{liu2025lm4decisionofad,
     title = {Awesome-LM-AD-Decision},
-    author = {Jiaqi Liu},
+    author = {Jiaqi Liu, Chengkai Xu},
     journal = {GitHub repository},
     url = {https://github.com/Jiaaqiliu/Awesome-LM-AD-Decision},
     year = {2025},
