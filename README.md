@@ -123,6 +123,7 @@ VLAs aim to create more generalist agents that can perceive, reason, and act, of
 | [DriveMoE: Mixture-of-Experts for Vision-Language-Action Model in End-to-End Autonomous Driving](https://arxiv.org/abs/2505.16278) | <details><summary>Details</summary></details>                | Arxiv 2025 | [Project](https://thinklab-sjtu.github.io/DriveMoE/)         |
 | [Impromptu VLA: Open Weights and Open Data for Driving Vision-Language-Action Models](https://arxiv.org/abs/2505.23757) | <details><summary>Details</summary></details>                | Arxiv 2025 | [Code](https://github.com/ahydchh/Impromptu-VLA) / [Project](http://impromptu-vla.c7w.tech/) |
 | [DiffVLA: Vision-Language Guided Diffusion Planning for Autonomous Driving](https://arxiv.org/abs/2505.19381) | <details><summary>Details</summary></details>                | Arxiv 2025 |                                                              |
+| [AutoVLA: A Vision-Language-Action Model for End-to-End Autonomous Driving with Adaptive Reasoning and Reinforcement Fine-Tuning](https://arxiv.org/pdf/2506.13757) | <details><summary>Details</summary></details>                | Arxiv 2025 |  [code](https://github.com/ucla-mobility/AutoVLA)/[Project](https://autovla.github.io/)   |
 
 ### **Categorization by Research Direction**
 
